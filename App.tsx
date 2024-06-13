@@ -24,6 +24,12 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import WebView from 'react-native-webview';
+import {
+  WebViewErrorEvent,
+  WebViewNavigationEvent,
+} from 'react-native-webview/lib/WebViewTypes';
+import {AttachmentProcessor} from './src/native-modules';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -62,6 +68,15 @@ function App(): React.JSX.Element {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
 
+  const handleLoad = (e: WebViewErrorEvent | WebViewNavigationEvent) => {
+    // @ts-ignore
+    const {target: nativeTag} = e.nativeEvent;
+    console.log('nativeTag:', nativeTag, typeof AttachmentProcessor);
+    if (AttachmentProcessor) {
+      AttachmentProcessor.process(nativeTag);
+    }
+  };
+
   return (
     <SafeAreaView style={backgroundStyle}>
       <StatusBar
@@ -76,6 +91,16 @@ function App(): React.JSX.Element {
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
+          <WebView
+            style={{
+              height: 300,
+              flex: 1,
+            }}
+            source={{
+              uri: 'https://www.craftz.dog/',
+            }}
+            onLoad={handleLoad}
+          />
           <Section title="Step One">
             Edit <Text style={styles.highlight}>App.tsx</Text> to change this
             screen and then come back to see your edits.

@@ -12,7 +12,9 @@
   },
   "dependencies": {
     "react": "18.2.0",
-    "react-native": "0.74.2"
+    "react-native": "0.74.2",
+    "react-native-haptic-feedback": "^2.2.0",
+    "react-native-webview": "latest"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
@@ -34,5 +36,13 @@
   "engines": {
     "node": ">=18"
   },
-  "packageManager": "yarn@3.6.4"
+  "packageManager": "yarn@3.6.4",
+  "codegenConfig": {
+    "name": "InkdropModuleSpec",
+    "type": "modules",
+    "jsSrcsDir": "src/spec",
+    "android": {
+      "javaPackageName": "com.rn74example"
+    }
+  }
 }
