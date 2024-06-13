@@ -3015,6 +3015,8 @@ __metadata:
     prettier: 2.8.8
     react: 18.2.0
     react-native: 0.74.2
+    react-native-haptic-feedback: ^2.2.0
+    react-native-webview: latest
     react-test-renderer: 18.2.0
     typescript: 5.0.4
   languageName: unknown
@@ -4442,17 +4444,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"escape-string-regexp@npm:2.0.0, escape-string-regexp@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "escape-string-regexp@npm:2.0.0"
+  checksum: 9f8a2d5743677c16e85c810e3024d54f0c8dea6424fad3c79ef6666e81dd0846f7437f5e729dfcdac8981bc9e5294c39b4580814d114076b8d36318f46ae4395
+  languageName: node
+  linkType: hard
+
 "escape-string-regexp@npm:^1.0.5":
   version: 1.0.5
   resolution: "escape-string-regexp@npm:1.0.5"
   checksum: 6092fda75c63b110c706b6a9bfde8a612ad595b628f0bd2147eea1d3406723020810e591effc7db1da91d80a71a737a313567c5abb3813e8d9c71f4aa595b410
-  languageName: node
-  linkType: hard
-
-"escape-string-regexp@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "escape-string-regexp@npm:2.0.0"
-  checksum: 9f8a2d5743677c16e85c810e3024d54f0c8dea6424fad3c79ef6666e81dd0846f7437f5e729dfcdac8981bc9e5294c39b4580814d114076b8d36318f46ae4395
   languageName: node
   linkType: hard
 
@@ -5496,7 +5498,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"invariant@npm:^2.2.4":
+"invariant@npm:2.2.4, invariant@npm:^2.2.4":
   version: 2.2.4
   resolution: "invariant@npm:2.2.4"
   dependencies:
@@ -7941,6 +7943,28 @@ __metadata:
   version: 17.0.2
   resolution: "react-is@npm:17.0.2"
   checksum: 9d6d111d8990dc98bc5402c1266a808b0459b5d54830bbea24c12d908b536df7883f268a7868cfaedde3dd9d4e0d574db456f84d2e6df9c4526f99bb4b5344d8
+  languageName: node
+  linkType: hard
+
+"react-native-haptic-feedback@npm:^2.2.0":
+  version: 2.2.0
+  resolution: "react-native-haptic-feedback@npm:2.2.0"
+  peerDependencies:
+    react-native: ">=0.60.0"
+  checksum: e7ce6b303a799dc7fd1c5851379b555b65052c3ef7fefe836c7881f125e4057134462554a996762e67ecc7f01e82e45dc3bcad17cc232b53511006160d5f98ed
+  languageName: node
+  linkType: hard
+
+"react-native-webview@npm:latest":
+  version: 13.10.3
+  resolution: "react-native-webview@npm:13.10.3"
+  dependencies:
+    escape-string-regexp: 2.0.0
+    invariant: 2.2.4
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  checksum: 333e940a2af300c7151106737cd812f102efd7e872286ce922290c2a0044e736ba86abab0841df591f42628017897344ab549ba6205471a44f74baff8bf196b1
   languageName: node
   linkType: hard
 
